@@ -1,3 +1,2 @@
-# mooseandbear
-Our personal website
 # laurenstead
+Lauren Stead Photography# laurenstead
