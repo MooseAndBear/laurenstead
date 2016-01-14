@@ -1,52 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <head><?php
 
-<head><?php
-    include "php/document--head.php";
-?></head>
+  include 'php/html_head.php';
 
-<body>
-    <a class="home"></a>
+  ?></head>
 
-    <div class="landing--view">
-        <a class="landing--logo"></a>
-        <a class="down--arrow"></a>
-    </div>
+  <body>
 
-    <section id="section_nav">
+    <div class="page-wrapper"><?php
 
-        <div class="content-container">
+        include 'php/section_sidebar.php';
 
-            <h1>Welcome</h1>
-            <h2>How can we help you today?</h2>
+    ?><div class="content"><?php
 
-            <div class="--spacing_100"></div>
+        $dirname = "images/";
+        $images = glob($dirname."*.jpg");
+ 
+        foreach($images as $image) {
 
-            <div class="naviagtion--buttons_container">
-                <a class="naviagtion--buttons_button --about --invert">
-                    <div class="navigation--buttons_desc">About Us</div>
-                </a>
-                <a class="naviagtion--buttons_button --work --invert">
-                    <div class="navigation--buttons_desc">Our Work</div>
-                </a>
-                <a class="naviagtion--buttons_button --info --invert">
-                    <div class="navigation--buttons_desc">More Info</div>
-                </a>
-                <a class="naviagtion--buttons_button --contact --invert">
-                    <div class="navigation--buttons_desc">Contact</div>
-                </a>
-            </div>
+            $imgalt = basename($image, ".jpg");
+            echo '<div class="img-container"><img src="'.$image.'" alt="'.$imgalt.'"/><form class="popup-form"><input id="img-url" type="text" value="Enter URL here" /><input type="submit" value="Submit"></form></div>';
+        }
 
-        </div>
-        <a class="nav-to-about section--arrow"></a>
+    ?></div>
+    </div><?php
+    
+        include 'php/html_javascript.php';
 
-    </section><?php
-
-    include "php/section--about.php";
-    include "php/section--work.php";
-    include "php/section--info.php";
-    include "php/section--contact.php";
-
-?></body>
-
+  ?></body>
 </html>
+  
