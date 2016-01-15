@@ -18,7 +18,6 @@
         $images = glob($dirname."*.jpg");
  
         foreach($images as $image) {
-
             $imgalt = basename($image, ".jpg");
             echo '<div class="img-container"><img src="'.$image.'" alt="'.$imgalt.'"/><form class="popup-form"><input id="img-url" type="text" value="Enter URL here" /><input type="submit" value="Submit"></form></div>';
         }
@@ -29,5 +28,4 @@
         include 'php/html_javascript.php';
 
   ?></body>
-</html>
-  
+</html>  

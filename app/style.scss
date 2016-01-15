@@ -6,7 +6,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body,
 html {
-  background: black;
+  background: none;
   color: white;
 }
 
@@ -128,7 +128,7 @@ nav {
 .content {
   vertical-align: top;
   display: inline-block;
-  background: white;
+  background: none;
   width: calc(100% - 350px);
   height: 100vh;
   //box-shadow: inset 10px 0 27.5px 5px rgba(0,0,0,0.5);
@@ -155,8 +155,8 @@ nav {
     transition: all .5s ease-in-out;
     
     &:hover {
-      box-shadow: inset 0 0 140px 15px rgba(0,0,0,1);
-      background: rgba(0,0,0,0.75);
+      box-shadow: inset 0 0 140px 15px rgba(0,0,0,9);
+      background: rgba(0,0,0,0.5);
     }
     
     @media (max-width: 1150px) {
@@ -179,6 +179,7 @@ nav {
     min-height: 100%;
     max-width: 101%;
     height: auto;
+    z-index: -1;
 
     transition: all .5s ease-in-out;
   }
@@ -187,7 +188,7 @@ nav {
 .title {
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   width: 100%;
   pointer-events: none;
