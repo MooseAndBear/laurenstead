@@ -1,6 +1,8 @@
 $(function() {
 
-  $('.img-container img').hover(
+
+  $('.collage-img').hover(
+
     function() {
       $(this).css('opacity', '.25');
       var a = $(this).attr('alt');
@@ -9,6 +11,7 @@ $(function() {
     function() {
       $(this).css('opacity', '1');
       $(this).siblings().remove('.title');
+
     }
   );
 

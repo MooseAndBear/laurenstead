@@ -6,9 +6,11 @@
 
   ?></head>
 
-  <body>
+  <body><?php
 
-    <div class="page-wrapper"><?php
+        include 'php/html_facebook.php';
+
+    ?><div class="page-wrapper"><?php
 
         include 'php/section_sidebar.php';
 
@@ -19,13 +21,14 @@
  
         foreach($images as $image) {
             $imgalt = basename($image, ".jpg");
-            echo '<div class="img-container"><img src="'.$image.'" alt="'.$imgalt.'"/><form class="popup-form"><input id="img-url" type="text" value="Enter URL here" /><input type="submit" value="Submit"></form></div>';
+            echo '<div class="img-container"><img class="collage-img" src="'.$image.'" alt="'.$imgalt.'"/></div>';
+            // Extra bit for adding custom images <form class="popup-form"><input id="img-url" type="text" value="Enter URL here" /><input type="submit" value="Submit"></form>
         }
 
     ?></div>
     </div><?php
     
-        include 'php/html_javascript.php';
+        include 'php/html_jquery.php';
 
   ?></body>
 </html>  

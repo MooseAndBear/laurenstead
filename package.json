@@ -17,6 +17,7 @@
     "css-brunch": ">= 1.0 < 1.9",
     "imagemin": "^4.0.0",
     "javascript-brunch": ">= 1.0 < 1.9",
+    "jquery": "^2.2.0",
     "sass-brunch": "^1.9.2",
     "uglify-js-brunch": ">= 1.0 < 1.9"
   }
