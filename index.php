@@ -2,7 +2,8 @@
 <html>
   <head><?php
 
-  include 'php/html_head.php';
+    include "sitecake/server/sitecake_entry.php";
+    include 'php/html_head.php';
 
   ?></head>
 
@@ -14,15 +15,14 @@
 
         include 'php/section_sidebar.php';
 
-    ?><div class="content sc-content"><?php
+    ?><div class="content"><?php
 
-        $dirname = "images/";
+        $dirname = "images/gallery/";
         $images = glob($dirname."*.jpg");
 
         foreach($images as $image) {
             $imgalt = basename($image, ".jpg");
             echo '<div class="img-container"><img class="collage-img" src="'.$image.'" alt="'.$imgalt.'"/></div>';
-            // Extra bit for adding custom images <form class="popup-form"><input id="img-url" type="text" value="Enter URL here" /><input type="submit" value="Submit"></form>
         }
 
     ?></div>
